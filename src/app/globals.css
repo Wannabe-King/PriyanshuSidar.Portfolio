@@ -24,9 +24,7 @@
 }
 
 .glass {
-  height: 100px;
-  width: 100px;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
 }
 
 body {
