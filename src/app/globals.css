@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-blurfg-100: hsl(210deg 88.24% 6.67% / 50%);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,6 +21,12 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+.glass {
+  height: 100px;
+  width: 100px;
+  backdrop-filter: blur(100px);
 }
 
 body {
