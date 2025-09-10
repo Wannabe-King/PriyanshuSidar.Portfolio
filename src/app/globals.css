@@ -2,6 +2,7 @@
 
 @theme {
   --color-blurfg-100: hsl(210deg 88.24% 6.67% / 50%);
+  --breakpoint-xs: 480px;
 }
 
 :root {
