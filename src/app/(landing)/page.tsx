@@ -1,5 +1,9 @@
-import Image from "next/image";
+import { Hero } from "./sections/hero";
 
 export default function Home() {
-  return <div className="w-full h-screen bg-red-500">giw</div>;
+  return (
+    <main className=" mx-auto max-w-7xl">
+      <Hero />
+    </main>
+  );
 }
