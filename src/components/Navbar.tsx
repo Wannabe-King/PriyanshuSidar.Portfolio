@@ -8,6 +8,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+// TODO: Make navbar to appear on hover over the div 
+
+
 export const Navbar = () => {
   return (
     <header
