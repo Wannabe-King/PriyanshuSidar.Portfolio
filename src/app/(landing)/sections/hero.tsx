@@ -4,9 +4,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { HeroText } from "../components/heroText";
 import { Astronaut } from "../components/astronaut";
 import { Suspense } from "react";
-import { Float, Loader, OrbitControls } from "@react-three/drei";
+import { Float, OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
+import { Loader } from "@/components/Loader";
 
 export const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 857 });
