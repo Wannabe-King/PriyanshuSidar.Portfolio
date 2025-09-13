@@ -2,7 +2,7 @@ import { Hero } from "./sections/hero";
 
 export default function Home() {
   return (
-    <main className="bg-black">
+    <main className=" mx-auto max-w-7xl">
       <Hero />
     </main>
   );

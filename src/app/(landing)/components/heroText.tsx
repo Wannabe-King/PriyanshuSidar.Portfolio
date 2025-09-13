@@ -14,13 +14,13 @@ export const HeroText = () => {
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
-          className="text-4xl font-medium"
+          className="text-4xl font-medium text-neutral-300"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm Ali
+          Hi I'm Priyanshu
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -50,20 +50,20 @@ export const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Solutions
+            Web & Mobile Solutions
           </motion.p>
         </div>
       </div>
       {/* Mobile View */}
       <div className="flex flex-col space-y-6 md:hidden">
         <motion.p
-          className="text-4xl font-medium"
+          className="text-4xl font-medium text-neutral-300"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi,I'm Ali
+          Hi,I'm Priyanshu
         </motion.p>
         <div>
           <motion.p
@@ -93,7 +93,7 @@ export const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Applications
+            Mobile & Web Applications
           </motion.p>
         </div>
       </div>

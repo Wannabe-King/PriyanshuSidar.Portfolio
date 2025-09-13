@@ -18,10 +18,10 @@ export const Navbar = () => {
     bg-[url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg)]
     "
     >
-      <div className=" bg-blurfg-100 text-gray-700 glass rounded-full self-start hidden xs:block xs:mt-3 ">
+      <div className=" bg-blurfg-100 text-gray-600 glass rounded-full self-start hidden xs:block xs:mt-3 ">
         <MailOpen size={25} className="m-4" fill="white" />
       </div>
-      <div className=" bg-blurfg-100 text-gray-700 glass rounded-full self-start hidden xs:block xs:mt-3 ">
+      <div className=" bg-blurfg-100 text-gray-600 glass rounded-full self-start hidden xs:block xs:mt-3 ">
         <Instagram size={25} className="m-4" fill="white" />
       </div>
       <div className="bg-blurfg-100 glass rounded-full p-2 xs:p-2.5">
@@ -29,10 +29,10 @@ export const Navbar = () => {
           <Ellipsis />
         </div>
       </div>
-      <div className=" bg-blurfg-100 glass rounded-full self-start hidden xs:block xs:mt-3 ">
+      <div className=" bg-blurfg-100 text-white glass rounded-full self-start hidden xs:block xs:mt-3 ">
         <Twitter size={25} className="m-4" fill="white" />
       </div>
-      <div className=" bg-blurfg-100 glass rounded-full self-start hidden xs:block xs:mt-3 ">
+      <div className=" bg-blurfg-100 glass text-white rounded-full self-start hidden xs:block xs:mt-3 ">
         <Github size={25} className="m-4" fill="white" />
       </div>
       {/* <nav className="flex justify-center gap-8 mx-8 ">
