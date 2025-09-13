@@ -61,82 +61,82 @@ export function Astronaut(props: AstronautProps) {
               <primitive object={nodes.metarig_rootJoint} />
               <skinnedMesh
                 name="Cube001_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube001_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube001_0.skeleton}
               />
               <skinnedMesh
                 name="Cube005_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube005_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube005_0.skeleton}
               />
               <skinnedMesh
                 name="Cube002_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube002_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube002_0.skeleton}
               />
               <skinnedMesh
                 name="Plane_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Plane_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Plane_0.skeleton}
               />
               <skinnedMesh
                 name="Cube008_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube008_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube008_0.skeleton}
               />
               <skinnedMesh
                 name="Cube004_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube004_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube004_0.skeleton}
               />
               <skinnedMesh
                 name="Cube003_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube003_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube003_0.skeleton}
               />
               <skinnedMesh
                 name="Cube_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube_0.skeleton}
               />
               <skinnedMesh
                 name="Cube009_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube009_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube009_0.skeleton}
               />
               <skinnedMesh
                 name="Cube011_0"
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 geometry={nodes.Cube011_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-expect-error
+                //@ts-expect-error - GLTF import types are not properly inferred
                 skeleton={nodes.Cube011_0.skeleton}
               />
               <group name="Cube001" />
