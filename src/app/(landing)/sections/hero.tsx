@@ -15,7 +15,7 @@ export const Hero = () => {
     <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start">
       <HeroText />
       <figure
-        className="absolute inset-0 z-10"
+        className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas camera={{ position: [0, 2, 3] }}>

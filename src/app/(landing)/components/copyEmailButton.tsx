@@ -1,8 +1,10 @@
+"use client"
+
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-const CopyEmailButton = () => {
+export const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
-  const email = "Your Email Address";
+  const email = "priyanshu21100@iiitnr.edu.in";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email);
@@ -49,5 +51,3 @@ const CopyEmailButton = () => {
     </motion.button>
   );
 };
-
-export default CopyEmailButton;
