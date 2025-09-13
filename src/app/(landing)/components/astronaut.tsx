@@ -12,27 +12,8 @@ import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
 import { useFrame } from "@react-three/fiber";
-import { Group, Mesh, SkinnedMesh, Bone, Material } from "three";
-import { GLTF } from "three-stdlib";
+import { Group } from "three";
 
-type GLTFResult = GLTF & {
-  nodes: {
-    metarig_rootJoint: Bone;
-    Cube001_0: SkinnedMesh;
-    Cube005_0: SkinnedMesh;
-    Cube002_0: SkinnedMesh;
-    Plane_0: SkinnedMesh;
-    Cube008_0: SkinnedMesh;
-    Cube004_0: SkinnedMesh;
-    Cube003_0: SkinnedMesh;
-    Cube_0: SkinnedMesh;
-    Cube009_0: SkinnedMesh;
-    Cube011_0: SkinnedMesh;
-  };
-  materials: {
-    "AstronautFallingTexture.png": Material;
-  };
-};
 
 interface AstronautProps {
   // Optional scale prop with a default value of 0.3
@@ -81,82 +62,82 @@ export function Astronaut(props: AstronautProps) {
               <primitive object={nodes.metarig_rootJoint} />
               <skinnedMesh
                 name="Cube001_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube001_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube001_0.skeleton}
               />
               <skinnedMesh
                 name="Cube005_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube005_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube005_0.skeleton}
               />
               <skinnedMesh
                 name="Cube002_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube002_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube002_0.skeleton}
               />
               <skinnedMesh
                 name="Plane_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Plane_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Plane_0.skeleton}
               />
               <skinnedMesh
                 name="Cube008_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube008_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube008_0.skeleton}
               />
               <skinnedMesh
                 name="Cube004_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube004_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube004_0.skeleton}
               />
               <skinnedMesh
                 name="Cube003_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube003_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube003_0.skeleton}
               />
               <skinnedMesh
                 name="Cube_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube_0.skeleton}
               />
               <skinnedMesh
                 name="Cube009_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube009_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube009_0.skeleton}
               />
               <skinnedMesh
                 name="Cube011_0"
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 geometry={nodes.Cube011_0.geometry}
                 material={materials["AstronautFallingTexture.png"]}
-                //@ts-ignore
+                //@ts-ignore @ts-expect-error
                 skeleton={nodes.Cube011_0.skeleton}
               />
               <group name="Cube001" />
