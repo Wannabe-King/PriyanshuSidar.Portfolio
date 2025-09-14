@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { CopyEmailButton } from "../components/copyEmailButton";
 // import { Frameworks } from "../components/FrameWorks";
 import Card from "../components/card";
+import Image from "next/image";
 
 const About = () => {
   const grid2Container = useRef<HTMLDivElement>(null);
@@ -14,12 +15,13 @@ const About = () => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end  grid-default-color grid-1">
-          <img
+          <Image
             src="assets/coding-pov.png"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            alt="coding-pov image"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Priyanshu Sidar</p>
+            <p className="headtext">Hi, I&apos;m Priyanshu Sidar</p>
             <p className="subtext">
               With 8+ months of experience, I developed my frontend and backend
               dev skills to deliver dynamic and software and web applications.
@@ -83,7 +85,7 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+              I&apos;m based in Mars, and open to remote work worldwide
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
