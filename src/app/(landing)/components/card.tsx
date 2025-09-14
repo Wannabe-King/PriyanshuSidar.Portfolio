@@ -1,7 +1,7 @@
 import { BoundingBox, motion } from "framer-motion";
 
 interface CardProp {
-  style: Object;
+  style: object;
   text?: string;
   image?: string | Blob;
   containerRef:
