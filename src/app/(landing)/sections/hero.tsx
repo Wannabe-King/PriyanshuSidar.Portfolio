@@ -4,9 +4,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { HeroText } from "../components/heroText";
 import { Astronaut } from "../components/astronaut";
 import { Suspense } from "react";
-import { Float, Loader, OrbitControls } from "@react-three/drei";
+import { Float, OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
+import { Loader } from "@/components/Loader";
 
 export const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 857 });
@@ -14,7 +15,7 @@ export const Hero = () => {
     <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start">
       <HeroText />
       <figure
-        className="absolute inset-0 z-10"
+        className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas camera={{ position: [0, 2, 3] }}>
