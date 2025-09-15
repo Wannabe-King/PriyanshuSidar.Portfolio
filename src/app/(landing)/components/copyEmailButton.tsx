@@ -44,7 +44,13 @@ export const CopyEmailButton = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <Image src="assets/copy.svg" className="w-5" alt="copy icon" />
+            <Image
+              src="assets/copy.svg"
+              className="w-5"
+              alt="copy icon"
+              width={23}
+              height={56}
+            />
             Copy Email Address
           </motion.p>
         )}

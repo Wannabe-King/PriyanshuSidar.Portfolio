@@ -1,11 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-// import { Globe } from "../components/globe";
 import { CopyEmailButton } from "../components/copyEmailButton";
-// import { Frameworks } from "../components/FrameWorks";
 import Card from "../components/card";
-import Image from "next/image";
+import { Globe } from "@/components/ui/globe";
+import { Frameworks } from "../components/framework";
 
 const About = () => {
   const grid2Container = useRef<HTMLDivElement>(null);
@@ -15,7 +14,7 @@ const About = () => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end  grid-default-color grid-1">
-          <Image
+          <img
             src="assets/coding-pov.png"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
             alt="coding-pov image"
@@ -85,12 +84,10 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-              I&apos;m based in Mars, and open to remote work worldwide
+              I&apos;m based in India, and open to remote work worldwide
             </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            {/* <Globe /> */}
-          </figure>
+          <Globe className="absolute left-[30%] top-[10%]" />
         </div>
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
@@ -111,7 +108,7 @@ const About = () => {
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            {/* <Frameworks /> */}
+            <Frameworks />
           </div>
         </div>
       </div>
