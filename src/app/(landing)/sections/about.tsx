@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { CopyEmailButton } from "../components/copyEmailButton";
 import Card from "../components/card";
 import { Globe } from "@/components/ui/globe";
+import { Frameworks } from "../components/framework";
 
 const About = () => {
   const grid2Container = useRef<HTMLDivElement>(null);
@@ -107,7 +108,7 @@ const About = () => {
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            {/* <Frameworks /> */}
+            <Frameworks />
           </div>
         </div>
       </div>
