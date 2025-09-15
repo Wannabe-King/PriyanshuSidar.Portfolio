@@ -1,4 +1,5 @@
 import About from "./sections/about";
+import { Experiences } from "./sections/experiences";
 import { Hero } from "./sections/hero";
 import { Projects } from "./sections/projects";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <Experiences/>
     </main>
   );
 }
