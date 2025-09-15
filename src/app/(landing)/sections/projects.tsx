@@ -1,16 +1,20 @@
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useState } from "react";
+"use client";
 
-const Projects = () => {
+import { myProjects } from "@/lib/constant";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { MouseEventHandler, useState } from "react";
+import { Project } from "../components/project";
+
+export const Projects = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { damping: 10, stiffness: 50 });
   const springY = useSpring(y, { damping: 10, stiffness: 50 });
-  const handleMouseMove = (e) => {
+  const handleMouseMove: MouseEventHandler<HTMLElement> = (e) => {
     x.set(e.clientX + 20);
     y.set(e.clientY + 20);
   };
-  const [preview, setPreview] = useState(null);
+  const [preview, setPreview] = useState<string | null>(null);
   return (
     <section
       onMouseMove={handleMouseMove}
