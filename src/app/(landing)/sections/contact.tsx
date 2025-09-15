@@ -56,7 +56,10 @@ export const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="relative flex items-center c-space section-spacing">
+    <section
+      id="contact"
+      className="relative flex items-center c-space section-spacing"
+    >
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -67,10 +70,11 @@ export const Contact = () => {
       {showAlert && <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let's Talk</h2>
+          <h2 className="text-heading">Let&apos;s Talk</h2>
           <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help
+            Whether you&apos;re loking to build a new website, improve your
+            existing platform, or bring a unique project to life, I&apos;m here
+            to help
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
