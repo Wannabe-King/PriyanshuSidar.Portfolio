@@ -86,9 +86,7 @@ const About = () => {
               I&apos;m based in India, and open to remote work worldwide
             </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
-          </figure>
+          <Globe className="absolute left-[30%] top-[10%]" />
         </div>
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
