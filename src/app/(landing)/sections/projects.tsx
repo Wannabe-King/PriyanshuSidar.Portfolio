@@ -17,6 +17,7 @@ export const Projects = () => {
   const [preview, setPreview] = useState<string | null>(null);
   return (
     <section
+      id="projects"
       onMouseMove={handleMouseMove}
       className="relative c-space section-spacing"
     >

@@ -1,6 +1,7 @@
 import About from "./sections/about";
 import { Contact } from "./sections/contact";
 import { Experiences } from "./sections/experiences";
+import { Footer } from "./sections/footer";
 import { Hero } from "./sections/hero";
 import { Projects } from "./sections/projects";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Projects />
       <Experiences />
       <Contact />
+      <Footer />
     </main>
   );
 }
