@@ -11,3 +11,8 @@ export type Tag = {
   path: string | Blob | undefined;
   name: string;
 };
+
+export enum AlertType {
+  "success",
+  "danger",
+}

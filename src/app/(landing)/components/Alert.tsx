@@ -1,6 +1,7 @@
+import { AlertType } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const Alert = ({ type, text }: { type: string; text: string }) => {
+export const Alert = ({ type, text }: { type: AlertType; text: string }) => {
   const alertVarients = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
     visible: { opacity: 1, y: 0, scale: 1 },
@@ -18,15 +19,15 @@ export const Alert = ({ type, text }: { type: string; text: string }) => {
       >
         <div
           className={`p-2 ${
-            type === "danger" ? "bg-red-800" : "bg-royal"
+            type === AlertType.danger ? "bg-red-800" : "bg-royal"
           } items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex rounded-md p-5`}
         >
           <p
             className={`flex rounded-full ${
-              type === "danger" ? "bg-red-500" : "bg-lavender"
+              type === AlertType.danger ? "bg-red-500" : "bg-lavender"
             } uppercase px-2 py-1 text-xs font-semibold mr-3`}
           >
-            {type === "danger" ? "Failed" : "Success"}
+            {type === AlertType.danger ? "Failed" : "Success"}
           </p>
           <p className="mr-2 text-left">{text}</p>
         </div>

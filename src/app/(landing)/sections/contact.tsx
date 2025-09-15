@@ -2,7 +2,8 @@
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
-// import Alert from "../components/Alert";
+import { Alert } from "../components/Alert";
+import { AlertType } from "@/lib/utils";
 // import { Particles } from "../components/Particles";
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,14 +13,14 @@ export const Contact = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState("success");
+  const [alertType, setAlertType] = useState<AlertType>(AlertType.success);
   const [alertMessage, setAlertMessage] = useState("");
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const showAlertMessage = (type: string, message: string) => {
+  const showAlertMessage = (type: AlertType, message: string) => {
     setAlertType(type);
     setAlertMessage(message);
     setShowAlert(true);
@@ -38,20 +39,20 @@ export const Contact = () => {
         "template_xbtccdr",
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Priyanshu",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "sidarsunita2@gmail.com",
           message: formData.message,
         },
         "L0kQzLsd-xjGQYpGA"
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+      showAlertMessage(AlertType.success, "You message has been sent!");
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      showAlertMessage(AlertType.danger, "Somthing went wrong!");
     }
   };
   return (
@@ -63,7 +64,7 @@ export const Contact = () => {
         color={"#ffffff"}
         refresh
       /> */}
-      {/* {showAlert && <Alert type={alertType} text={alertMessage} />} */}
+      {showAlert && <Alert type={alertType} text={alertMessage} />}
       <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
@@ -117,7 +118,7 @@ export const Contact = () => {
               placeholder="Share your thoughts..."
               autoComplete="message"
               value={formData.message}
-              onChange={(e) => {}}
+              onChange={handleChange}
               required
             />
           </div>
