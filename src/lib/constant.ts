@@ -233,7 +233,7 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Flutter Developer Intern ",
+    title: "SDE Intern ",
     job: "Aletix - Sanrakshak",
     date: "Jan. - June 2025",
     contents: [
