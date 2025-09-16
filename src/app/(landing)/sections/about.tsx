@@ -39,7 +39,7 @@ const About = () => {
             </p>
             <Card
               style={{ rotate: "75deg", top: "30%", left: "20%" }}
-              text="GRASP"
+              text="Clean Architecture"
               containerRef={grid2Container}
             />
             <Card
@@ -49,32 +49,57 @@ const About = () => {
             />
             <Card
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
-              text="Design Patterns"
+              text="MCP"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Design Principles"
+              text="Smart Contract"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "20deg", top: "10%", left: "38%" }}
-              text="SRP"
+              text="Testing"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
+              image="assets/logos/flutter.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
+              image="assets/logos/typescript.svg"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
+              image="assets/logos/react.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "35deg", top: "70%", left: "10%" }}
+              image="assets/logos/firebase.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "30%", left: "70%" }}
+              image="assets/logos/nextjs.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "10%", left: "70%" }}
+              image="assets/logos/python.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "45deg", top: "0%", left: "85%" }}
+              image="assets/logos/postgresql.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-15deg", top: "50%", left: "50%" }}
+              image="assets/logos/stripe.svg"
               containerRef={grid2Container}
             />
           </div>
