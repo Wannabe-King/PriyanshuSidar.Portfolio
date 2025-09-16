@@ -233,39 +233,38 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
+    title: "Flutter Developer Intern ",
+    job: "Aletix - Sanrakshak",
+    date: "Jan. - June 2025",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
+      "Implementing UI of the application and implemented features like emergency sos, live traking, nearest police station and hospital locations marked on map.",
+      "Collaborate with the engineering team to develop, test, and deploy software solutions. Participate in code reviews, brainstorming sessions, and team meetings.",
+      "Identify and resolve technical challenges while contributing to the enhancement of products.",
+      "Document code and maintain proper records of all project-related activities.",
+    ],
+  },
+  {
+    title: "Software Development Intern ",
+    job: "Frabrain Technology - Paisave",
+    date: "June - Aug. 2024",
+    contents: [
+      "Developed a product that leverages UPI’s autopay feature to promote disciplined investing, projected to increase savings and investment rates by at least 45%.",
+      "Designed a user-friendly UI and implemented 24/7 AI chatbot support to address customer grievances and enhance user experience swiftly.",
       "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Software Engineer Intern",
+    job: "Cillyfox - Stoic Wallpaper App",
+    date: "April - July 2024",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
-    ],
-  },
-  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
-    contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Implemented Advanced Revenue System: Integrated Banner Ads, Interstitial Ads, and In-App Purchases, resulting in a 45% revenue growth.",
+      "Improved code efficiency by 23% through Clean Architecture, Bloc State management, and reusable modular widgets, reducing app size from 21 MB to 13.3 MB.",
+      "Enhanced Features: Developed features like Download Wallpaper and Auto-Wallpaper increasing the user base by 2X from 2k to about 10k.",
     ],
   },
 ];
+
 export const reviews = [
   {
     name: "Jack",
