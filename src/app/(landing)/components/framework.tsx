@@ -1,15 +1,25 @@
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 
 export function Frameworks() {
-  const skills = ["css3", "git", "react", "tailwindcss", "stripe"];
+  const skills = [
+    "git",
+    "react",
+    "tailwindcss",
+    "nextjs",
+    "python",
+    "typescript",
+    "firebase",
+    "postgresql",
+    "flutter",
+  ];
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
-      <OrbitingCircles iconSize={40}>
+      <OrbitingCircles iconSize={30}>
         {skills.map((skill, index) => (
           <Icon key={index} src={`assets/logos/${skill}.svg`} />
         ))}
       </OrbitingCircles>
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
+      <OrbitingCircles iconSize={15} radius={100} reverse speed={2}>
         {skills.reverse().map((skill, index) => (
           <Icon key={index} src={`assets/logos/${skill}.svg`} />
         ))}

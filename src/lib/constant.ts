@@ -1,36 +1,62 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Dealfit: Platform for Country Specific Discounts",
     description:
       "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "Developed a scalable SaaS platform enabling country-specific discounts and localized product visibility.",
+      "Integrated authentication with Clerk and payment workflows with Stripe for secure subscription management. Designed a normalized PostgreSQL schema with Drizzle ORM to manage products, discounts, and analytics.",
+      "Implemented dynamic banner embedding and tracking to monitor product views across different countries. Enhanced user experience with product customization, role-based permissions, and real-time analytics dashboards.",
     ],
-    href: "",
+    href: "https://dealfit.priyanshu-sidar.me",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/dealfit.png",
     tags: [
       {
         id: 1,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 3,
+        name: "Clerk",
+        path: "/assets/logos/clerk.svg",
+      },
+      {
+        id: 4,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      },
+      {
+        id: 5,
+        name: "Drizzle ORM",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 6,
+        name: "Stripe",
+        path: "/assets/logos/stripe.svg",
+      },
+      {
+        id: 7,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
       },
     ],
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
-    description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+    title: "CoDraw",
+    description: "Draw and ideate with your team.",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "Developed a real-time collaborative whiteboard app with multi-user drawing and user authentication.",
+      "Designed a modular architecture comprising a React frontend, WebSocket server for live interactions, HTTP backend for auth and DB ops, and PostgreSQL for persistent encrypted storage.",
     ],
     href: "",
     logo: "",
@@ -46,25 +72,43 @@ export const myProjects = [
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
       },
+      {
+        id: 3,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 4,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 5,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      },
     ],
   },
   {
     id: 3,
-    title: "Blazor Web App",
+    title: "Vertax Analytics Dashboard",
     description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+      "Developed a dynamic, responsive analytics dashboard with interactive graphs (Recharts) and global demographic visualizations for company/site performance.",
     subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
+      "Implemented scalable modular architecture, reusable UI components, and seamless multi-page navigation using React Router v7 and TypeScript.",
       "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
     ],
-    href: "",
+    href: "https://vetx-dashboard-vmgw.vercel.app/",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/vertex.png",
     tags: [
       {
-        id: 4,
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
       },
@@ -72,72 +116,93 @@ export const myProjects = [
   },
   {
     id: 4,
-    title: "C++ Game Engine",
+    title: "Zerodha MCP Trading Agent",
     description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
+      "Built an MCP-compatible TypeScript server enabling AI agents to execute market operations—buy, sell, and view portfolio—via Zerodha’s Kite Connect API.",
     subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
+      "Used ZerodhaJS SDK for programmatically calling API’s to place orders and get portfolio details",
     ],
-    href: "",
+    href: "https://github.com/Wannabe-King/ZerodhaMCP",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/zerodhamcp.png",
     tags: [
+      {
+        id: 1,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 2,
+        name: "MCP(Model Context Protocol)",
+        path: "",
+      },
       {
         id: 3,
         name: "Git",
         path: "/assets/logos/git.svg",
       },
+      {
+        id: 4,
+        name: "Node.js",
+        path: "/assets/logos/node.svg",
+      },
     ],
   },
   {
     id: 5,
-    title: "WordPress Custom Theme",
+    title: "Advanced Cricket Analysis & Prediction",
     description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
+      "A web app that analyzes player stats from past matches and predicts future performance, including fantasy points, using ML models.",
     subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
+      "Implemented player-specific predictions based on opponent team and venue, with a user-friendly interface for accessing recent stats and forecasts.",
     ],
-    href: "",
+    href: "https://github.com/Wannabe-King/Advanced_Cricket_Analysis_And_Prediction",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/cricketanalytics.png",
     tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.svg",
+      },
+      {
+        id: 2,
+        name: "Flask",
+        path: "/assets/logos/flask.svg",
+      },
       {
         id: 3,
         name: "CSS3",
         path: "/assets/logos/css3.svg",
       },
+      {
+        id: 4,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
     ],
   },
   {
     id: 6,
-    title: "Online Learning Platform",
+    title: "NFTGalleryApp",
     description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
+      "NFT Gallery App(also supports 3D assets) for solana wallet holders where they can see all their nft (For Android Only)",
     subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
+      "Implemented wallet creation, sign-in functionality, and support for both Mainnet and Devnet environments. Enabled balance checks and NFT previews (image and 3D both) via IPFS links.",
     ],
-    href: "",
+    href: "https://github.com/Wannabe-King/NFTGalleryApp",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
       {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
+        id: 1,
+        name: "Flutter",
+        path: "/assets/logos/flutter.svg",
       },
       {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        id: 2,
+        name: "Firebase",
+        path: "/assets/logos/firebase.svg",
       },
     ],
   },
@@ -168,39 +233,38 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
+    title: "SDE Intern ",
+    job: "Aletix - Sanrakshak",
+    date: "Jan. - June 2025",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
+      "Implementing UI of the application and implemented features like emergency sos, live traking, nearest police station and hospital locations marked on map.",
+      "Collaborate with the engineering team to develop, test, and deploy software solutions. Participate in code reviews, brainstorming sessions, and team meetings.",
+      "Identify and resolve technical challenges while contributing to the enhancement of products.",
+      "Document code and maintain proper records of all project-related activities.",
+    ],
+  },
+  {
+    title: "Software Development Intern ",
+    job: "Frabrain Technology - Paisave",
+    date: "June - Aug. 2024",
+    contents: [
+      "Developed a product that leverages UPI’s autopay feature to promote disciplined investing, projected to increase savings and investment rates by at least 45%.",
+      "Designed a user-friendly UI and implemented 24/7 AI chatbot support to address customer grievances and enhance user experience swiftly.",
       "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Software Engineer Intern",
+    job: "Cillyfox - Stoic Wallpaper App",
+    date: "April - July 2024",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
-    ],
-  },
-  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
-    contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Implemented Advanced Revenue System: Integrated Banner Ads, Interstitial Ads, and In-App Purchases, resulting in a 45% revenue growth.",
+      "Improved code efficiency by 23% through Clean Architecture, Bloc State management, and reusable modular widgets, reducing app size from 21 MB to 13.3 MB.",
+      "Enhanced Features: Developed features like Download Wallpaper and Auto-Wallpaper increasing the user base by 2X from 2k to about 10k.",
     ],
   },
 ];
+
 export const reviews = [
   {
     name: "Jack",
