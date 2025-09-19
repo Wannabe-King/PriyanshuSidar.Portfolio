@@ -13,7 +13,6 @@ import {
 import Link from "next/link";
 import { Dispatch, SetStateAction, useRef, useState } from "react";
 
-// TODO: Make navbar to appear on hover over the div
 type Position = {
   left?: number;
   width?: number;
@@ -34,7 +33,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className="flex justify-center gap-4 fixed bottom-10 left-0 right-0 overflow-x-scroll md:overflow-visible z-10
+      className="flex justify-center gap-4 fixed bottom-10 left-0 right-0 overflow-x-scroll md:overflow-visible z-50
     ]
     "
     >
@@ -76,6 +75,12 @@ export const Navbar = () => {
               setPosition={setPosition}
             />
             <Tab name="CONTACT" href="/#contact" setPosition={setPosition} />
+            {/* To be implemented */}
+            <Tab
+              name="TODAY I LEARNED"
+              href="/#til"
+              setPosition={setPosition}
+            />
             <Cursor position={position} />
           </nav>
         )}
@@ -126,28 +131,10 @@ const Tab = ({
           opacity: 1,
         });
       }}
-      className="py-4 px-4  rounded-4xl  whitespace-nowrap  "
+      className="py-4 px-4  rounded-4xl  whitespace-nowrap hover:text-blurfg-100 "
     >
       {name}
     </Link>
-
-    // <li
-    //   ref={ref}
-    //   onMouseEnter={() => {
-    //     if (!ref?.current) return;
-
-    //     const { width } = ref.current.getBoundingClientRect();
-
-    //     setPosition({
-    //       left: ref.current.offsetLeft,
-    //       width,
-    //       opacity: 1,
-    //     });
-    //   }}
-    //   className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs  mix-blend-difference md:px-5 md:py-3 md:text-base"
-    // >
-    //   {children}
-    // </li>
   );
 };
 
