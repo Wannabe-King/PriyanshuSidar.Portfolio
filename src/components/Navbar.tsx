@@ -78,7 +78,7 @@ export const Navbar = () => {
             {/* To be implemented */}
             <Tab
               name="TODAY I LEARNED"
-              href="/#til"
+              href="/todayilearned"
               setPosition={setPosition}
             />
             <Cursor position={position} />
