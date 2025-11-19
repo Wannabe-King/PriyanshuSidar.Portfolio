@@ -1,7 +1,6 @@
 "use client";
 
 import { FlipWords } from "@/components/ui/flip-words";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { motion } from "framer-motion";
 
 export const HeroText = () => {
@@ -71,9 +70,6 @@ export const HeroText = () => {
           >
             Resume
           </motion.div>
-          {/* <HoverBorderGradient className="w-100 h-10 bg-red-400">
-            Resume
-          </HoverBorderGradient> */}
         </div>
       </div>
       {/* Mobile View */}
