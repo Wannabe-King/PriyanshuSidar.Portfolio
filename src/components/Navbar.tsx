@@ -33,24 +33,24 @@ export const Navbar = () => {
 
   return (
     <header
-      className="flex justify-center gap-4 fixed bottom-10 left-0 right-0 overflow-x-scroll md:overflow-visible z-50
+      className="flex justify-center gap-2 md:gap-4 fixed bottom-10 left-0 right-0 overflow-x-scroll md:overflow-visible z-50
     ]
     "
     >
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 text-blurfg-100 glass rounded-full self-start hidden xs:block xs:mt-3 hover:bg-white"
+          className=" bg-blurfg-100 text-blurfg-100 glass rounded-full self-start mt-2 xs:mt-3 hover:bg-white"
           href={"#contact"}
         >
-          <MailOpen size={25} className="m-4" fill="white" />
+          <MailOpen size={25} className="m-3 md:m-4" fill="white" />
         </Link>
       )}
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 text-white glass rounded-full self-start hidden xs:block xs:mt-3 hover:bg-blue-500"
+          className=" bg-blurfg-100 text-white glass rounded-full self-start mt-2 xs:mt-3 hover:bg-blue-500"
           href={"https://www.linkedin.com/in/priyanshu-sidar-639914144/"}
         >
-          <Linkedin size={25} className="m-4" fill="white" />
+          <Linkedin size={25} className="m-3 md:m-4" fill="white" />
         </Link>
       )}
       <div
@@ -87,18 +87,18 @@ export const Navbar = () => {
       </div>
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 text-white glass rounded-full self-start hidden xs:block xs:mt-3 hover:bg-blue-400"
+          className=" bg-blurfg-100 text-white glass rounded-full self-start mt-2 xs:mt-3 hover:bg-blue-400"
           href={"#"}
         >
-          <Twitter size={25} className="m-4" fill="white" />
+          <Twitter size={25} className="m-3 md:m-4" fill="white" />
         </Link>
       )}
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 glass text-white rounded-full self-start hidden xs:block xs:mt-3 hover:bg-black"
+          className=" bg-blurfg-100 glass text-white rounded-full self-start mt-2 xs:mt-3 hover:bg-black"
           href={"https://github.com/Wannabe-King"}
         >
-          <Github size={25} className="m-4" fill="white" />
+          <Github size={25} className="m-3 md:m-4" fill="white" />
         </Link>
       )}
     </header>
