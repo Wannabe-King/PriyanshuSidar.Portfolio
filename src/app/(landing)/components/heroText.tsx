@@ -11,10 +11,7 @@ export const HeroText = () => {
   };
 
   const openResumeInNewPage = () => {
-    window.open(
-      "https://drive.google.com/file/d/10FMsYRKVTwrXCPV2Uh1pc9MvIki88dMA/view?usp=sharing",
-      "_blank"
-    );
+    window.open(process.env.NEXT_PUBLIC_RESUME_URL, "_blank");
   };
 
   return (
