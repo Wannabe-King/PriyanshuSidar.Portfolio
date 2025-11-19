@@ -7,7 +7,7 @@ import { Projects } from "./sections/projects";
 
 export default function Home() {
   return (
-    <main className=" max-w-7xl">
+    <main className="mx-auto max-w-7xl">
       <Hero />
       <About />
       <Projects />
