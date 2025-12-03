@@ -32,7 +32,12 @@ export const CopyEmailButton = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
           >
-            <Image src="assets/copy-done.svg" className="w-5" alt="copy Icon" />
+            <Image
+              src="assets/copy-done.svg"
+              width={5}
+              height={5}
+              alt="copy Icon"
+            />
             Email has Copied
           </motion.p>
         ) : (

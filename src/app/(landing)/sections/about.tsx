@@ -120,7 +120,7 @@ const About = () => {
             <p className="text-center headtext">
               Do you want to start a project together?
             </p>
-            <CopyEmailButton />
+            <CopyEmailButton/>
           </div>
         </div>
         {/* Grid 5 */}
