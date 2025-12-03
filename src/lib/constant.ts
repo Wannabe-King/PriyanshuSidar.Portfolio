@@ -1,6 +1,162 @@
 export const myProjects = [
   {
     id: 1,
+    title: "NFTGalleryApp",
+    description:
+      "NFT Gallery App(also supports 3D assets) for solana wallet holders where they can see all their nft (For Android Only)",
+    subDescription: [
+      "Implemented wallet creation, sign-in functionality, and support for both Mainnet and Devnet environments. Enabled balance checks and NFT previews (image and 3D both) via IPFS links.",
+    ],
+    href: "https://github.com/Wannabe-King/NFTGalleryApp",
+    logo: "",
+    image: "/assets/projects/accessories.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "Flutter",
+        path: "/assets/logos/flutter.svg",
+      },
+      {
+        id: 2,
+        name: "Firebase",
+        path: "/assets/logos/firebase.svg",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Advanced Cricket Analysis & Prediction",
+    description:
+      "A web app that analyzes player stats from past matches and predicts future performance, including fantasy points, using ML models.",
+    subDescription: [
+      "Implemented player-specific predictions based on opponent team and venue, with a user-friendly interface for accessing recent stats and forecasts.",
+    ],
+    href: "https://github.com/Wannabe-King/Advanced_Cricket_Analysis_And_Prediction",
+    logo: "",
+    image: "/assets/projects/cricketanalytics.png",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "/assets/logos/python.svg",
+      },
+      {
+        id: 2,
+        name: "Flask",
+        path: "/assets/logos/flask.svg",
+      },
+      {
+        id: 3,
+        name: "CSS3",
+        path: "/assets/logos/css3.svg",
+      },
+      {
+        id: 4,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Zerodha MCP Trading Agent",
+    description:
+      "Built an MCP-compatible TypeScript server enabling AI agents to execute market operations—buy, sell, and view portfolio—via Zerodha’s Kite Connect API.",
+    subDescription: [
+      "Used ZerodhaJS SDK for programmatically calling API’s to place orders and get portfolio details",
+    ],
+    href: "https://github.com/Wannabe-King/ZerodhaMCP",
+    logo: "",
+    image: "/assets/projects/zerodhamcp.png",
+    tags: [
+      {
+        id: 1,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 2,
+        name: "MCP(Model Context Protocol)",
+        path: "",
+      },
+      {
+        id: 3,
+        name: "Git",
+        path: "/assets/logos/git.svg",
+      },
+      {
+        id: 4,
+        name: "Node.js",
+        path: "/assets/logos/node.svg",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Vertax Analytics Dashboard",
+    description:
+      "Developed a dynamic, responsive analytics dashboard with interactive graphs (Recharts) and global demographic visualizations for company/site performance.",
+    subDescription: [
+      "Implemented scalable modular architecture, reusable UI components, and seamless multi-page navigation using React Router v7 and TypeScript.",
+      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
+    ],
+    href: "https://vetx-dashboard-vmgw.vercel.app/",
+    logo: "",
+    image: "/assets/projects/vertex.png",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "CoDraw",
+    description: "Draw and ideate with your team.",
+    subDescription: [
+      "Developed a real-time collaborative whiteboard app with multi-user drawing and user authentication.",
+      "Designed a modular architecture comprising a React frontend, WebSocket server for live interactions, HTTP backend for auth and DB ops, and PostgreSQL for persistent encrypted storage.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/accessories.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 3,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 4,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 5,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      },
+    ],
+  },
+  {
+    id: 6,
     title: "Dealfit: Platform for Country Specific Discounts",
     description:
       "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
@@ -51,159 +207,26 @@ export const myProjects = [
     ],
   },
   {
-    id: 2,
-    title: "CoDraw",
-    description: "Draw and ideate with your team.",
-    subDescription: [
-      "Developed a real-time collaborative whiteboard app with multi-user drawing and user authentication.",
-      "Designed a modular architecture comprising a React frontend, WebSocket server for live interactions, HTTP backend for auth and DB ops, and PostgreSQL for persistent encrypted storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 3,
-        name: "Next.js",
-        path: "/assets/logos/nextjs.svg",
-      },
-      {
-        id: 4,
-        name: "TypeScript",
-        path: "/assets/logos/typescript.svg",
-      },
-      {
-        id: 5,
-        name: "PostgreSQL",
-        path: "/assets/logos/postgresql.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Vertax Analytics Dashboard",
+    id: 7,
+    title: "AI Thumbnail Generator",
     description:
-      "Developed a dynamic, responsive analytics dashboard with interactive graphs (Recharts) and global demographic visualizations for company/site performance.",
+      "AI-powered thumbnail generation platform using video frame embeddings, scoring models, automated captions, and high-performance media pipelines.",
     subDescription: [
-      "Implemented scalable modular architecture, reusable UI components, and seamless multi-page navigation using React Router v7 and TypeScript.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
+      "Implemented AI-driven thumbnail generation using frame embeddings, scoring models, and automated caption creation to produce highly relevant and visually compelling thumbnails.",
+      "Engineered a high-performance media processing workflow with FFmpeg-based frame extraction, background worker queues, and automated caption layout for efficient handling of long-form videos.",
+      "Developed a SaaS platform with dashboards, secure authentication, Stripe subscriptions, usage limits, and Vercel + CDN deployment for fast thumbnail previews and asset delivery.",
     ],
-    href: "https://vetx-dashboard-vmgw.vercel.app/",
+    href: "https://click-boost-ai-ai-tumbnail-generato.vercel.app/",
     logo: "",
-    image: "/assets/projects/vertex.png",
+    image: "/assets/projects/thumbnailgenerator.png",
     tags: [
-      {
-        id: 1,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Zerodha MCP Trading Agent",
-    description:
-      "Built an MCP-compatible TypeScript server enabling AI agents to execute market operations—buy, sell, and view portfolio—via Zerodha’s Kite Connect API.",
-    subDescription: [
-      "Used ZerodhaJS SDK for programmatically calling API’s to place orders and get portfolio details",
-    ],
-    href: "https://github.com/Wannabe-King/ZerodhaMCP",
-    logo: "",
-    image: "/assets/projects/zerodhamcp.png",
-    tags: [
-      {
-        id: 1,
-        name: "TypeScript",
-        path: "/assets/logos/typescript.svg",
-      },
-      {
-        id: 2,
-        name: "MCP(Model Context Protocol)",
-        path: "",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Node.js",
-        path: "/assets/logos/node.svg",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "Advanced Cricket Analysis & Prediction",
-    description:
-      "A web app that analyzes player stats from past matches and predicts future performance, including fantasy points, using ML models.",
-    subDescription: [
-      "Implemented player-specific predictions based on opponent team and venue, with a user-friendly interface for accessing recent stats and forecasts.",
-    ],
-    href: "https://github.com/Wannabe-King/Advanced_Cricket_Analysis_And_Prediction",
-    logo: "",
-    image: "/assets/projects/cricketanalytics.png",
-    tags: [
-      {
-        id: 1,
-        name: "Python",
-        path: "/assets/logos/python.svg",
-      },
-      {
-        id: 2,
-        name: "Flask",
-        path: "/assets/logos/flask.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "NFTGalleryApp",
-    description:
-      "NFT Gallery App(also supports 3D assets) for solana wallet holders where they can see all their nft (For Android Only)",
-    subDescription: [
-      "Implemented wallet creation, sign-in functionality, and support for both Mainnet and Devnet environments. Enabled balance checks and NFT previews (image and 3D both) via IPFS links.",
-    ],
-    href: "https://github.com/Wannabe-King/NFTGalleryApp",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Flutter",
-        path: "/assets/logos/flutter.svg",
-      },
-      {
-        id: 2,
-        name: "Firebase",
-        path: "/assets/logos/firebase.svg",
-      },
+      { id: 1, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "FFmpeg", path: "" },
+      { id: 4, name: "OpenAI / LLaMA", path: "" },
+      { id: 5, name: "tRPC", path: "" },
+      { id: 6, name: "Stripe", path: "/assets/logos/stripe.svg" },
+      { id: 7, name: "Prisma", path: "" },
     ],
   },
 ];
