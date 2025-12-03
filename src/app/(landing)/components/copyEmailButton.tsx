@@ -36,6 +36,7 @@ export const CopyEmailButton = () => {
               src="assets/copy-done.svg"
               width={5}
               height={5}
+              className="w-5"
               alt="copy Icon"
             />
             Email has Copied
