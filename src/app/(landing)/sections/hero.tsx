@@ -8,6 +8,7 @@ import { Float, OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import { Loader } from "@/components/Loader";
+import { MusicPlayer } from "../components/musicPlayer";
 
 export const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 857 });
@@ -16,6 +17,7 @@ export const Hero = () => {
       id="home"
       className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start"
     >
+      <MusicPlayer/>
       <HeroText />
       <figure
         className="absolute inset-0"

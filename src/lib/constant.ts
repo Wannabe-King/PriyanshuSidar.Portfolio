@@ -124,7 +124,7 @@ export const myProjects = [
       "Developed a real-time collaborative whiteboard app with multi-user drawing and user authentication.",
       "Designed a modular architecture comprising a React frontend, WebSocket server for live interactions, HTTP backend for auth and DB ops, and PostgreSQL for persistent encrypted storage.",
     ],
-    href: "",
+    href: "https://github.com/Wannabe-King/CoDraw",
     logo: "",
     image: "/assets/projects/accessories.jpg",
     tags: [
