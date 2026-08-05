@@ -50,5 +50,9 @@ function Rig() {
       0.5,
       delta
     );
+    // Keep the camera aimed at the origin as it moves. OrbitControls used to do
+    // this every frame; without it the rotation stays frozen at the initial
+    // position and the model drifts out of frame.
+    state.camera.lookAt(0, 0, 0);
   });
 }
