@@ -7,7 +7,7 @@ export const MusicPlayer = () => {
 
   useEffect(() => {
     audioRef.current = new Audio("assets/songs/Worship.mp3");
-    audioRef.current.volume=0.3;
+    audioRef.current.volume=0.1;
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();

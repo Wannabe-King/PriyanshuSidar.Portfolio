@@ -208,7 +208,7 @@ export const myProjects = [
   },
   {
     id: 7,
-    title: "AI Thumbnail Generator",
+    title: "ClickBoost: Thumbnail Generator",
     description:
       "AI-powered thumbnail generation platform using video frame embeddings, scoring models, automated captions, and high-performance media pipelines.",
     subDescription: [
@@ -223,7 +223,6 @@ export const myProjects = [
       { id: 1, name: "Next.js", path: "/assets/logos/nextjs.svg" },
       { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
       { id: 3, name: "FFmpeg", path: "" },
-      { id: 4, name: "OpenAI / LLaMA", path: "" },
       { id: 5, name: "tRPC", path: "" },
       { id: 6, name: "Stripe", path: "/assets/logos/stripe.svg" },
       { id: 7, name: "Prisma", path: "" },

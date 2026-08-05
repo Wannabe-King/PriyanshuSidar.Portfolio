@@ -4,7 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { HeroText } from "../components/heroText";
 import { Astronaut } from "../components/astronaut";
 import { Suspense } from "react";
-import { Float, OrbitControls } from "@react-three/drei";
+import { Float } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import { Loader } from "@/components/Loader";
@@ -23,7 +23,10 @@ export const Hero = () => {
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
       >
-        <Canvas camera={{ position: [0, 2, 3] }}>
+        {/* No OrbitControls: it calls preventDefault on wheel and sets
+            touch-action: none on the canvas, which blocks page scrolling.
+            Camera movement is handled by Rig below. */}
+        <Canvas camera={{ position: [0, 2, 3] }} style={{ touchAction: "pan-y" }}>
           <Suspense fallback={<Loader />}>
             <Float>
               <Astronaut
@@ -33,7 +36,6 @@ export const Hero = () => {
               <Rig />
             </Float>
           </Suspense>
-          <OrbitControls />
         </Canvas>
       </figure>
     </section>
