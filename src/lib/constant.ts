@@ -241,11 +241,11 @@ export const mySocials = [
     href: "https://www.linkedin.com/in/priyanshu-sidar-639914144/",
     icon: "/assets/socials/linkedIn.svg",
   },
-  {
-    name: "Github",
-    href: "https://www.linkedin.com/in/priyanshu-sidar-639914144/",
-    icon: "/assets/socials/linkedIn.svg",
-  },
+  // {
+  //   name: "Github",
+  //   href: "https://www.linkedin.com/in/priyanshu-sidar-639914144/",
+  //   icon: "/assets/socials/linkedIn.svg",
+  // },
   // {
   //   name: "Instagram",
   //   href: "https://www.instagram.com/ali.sanatidev/reels/",
@@ -254,6 +254,32 @@ export const mySocials = [
 ];
 
 export const experiences = [
+  {
+    title: "AI/ML Engineer",
+    job: "Vocarix AI",
+    date: "Feb. 2026 - Present",
+    location: "Remote",
+    stack:
+      "Python, FastAPI, LiveKit, Pinecone RAG, Langfuse, Azure Containers",
+    contents: [
+      "Architected a real-time Voice AI agentic pipeline (OpenAI, Sarvam STT, ElevenLabs TTS) sustaining 700ms p95 voice-to-voice latency, deployed for 3 enterprise clients.",
+      "Cut average turn latency by 24% (986ms → 751ms) by implementing prompt caching, and a further 100-150ms through systematic benchmarking of 6+ LLM backends on latency-vs-quality tradeoffs.",
+      "Gated Pinecone retrieval with an N-gram multi-keyword intent-matching layer, cutting unnecessary vector lookups and improving contextual relevance on the RAG path.",
+      "Built an automated call-evaluation dashboard (TypeScript, FastAPI, Langfuse) scoring recorded calls on sentiment, governance compliance, and conversational flow, replacing manual QA review.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    job: "Zenlit Technology Solutions",
+    date: "Aug. - Nov. 2025",
+    location: "Remote",
+    stack:
+      "Next.js, React, Tailwind, TypeScript, Ingress, Modal Cloud Deployment",
+    contents: [
+      "Built AI-based highlight detection using Whisper transcription and an embeddings-scoring pipeline, improving clip relevance by 40% (manual A/B testing) and reducing manual editing time by 5x (1 hour to 12 minutes).",
+      "Designed a scalable processing workflow with background workers for transcription, segment scoring, and FFmpeg clip generation, enabling 30+ min media processing with faster exports.",
+    ],
+  },
   {
     title: "SDE Intern ",
     job: "Aletix - Sanrakshak",

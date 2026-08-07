@@ -4,7 +4,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { motion } from "framer-motion";
 
 export const HeroText = () => {
-  const words = ["Secure", "Modern", "Scalable"];
+  const words = ["Real-Time", "Agentic", "Scalable"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -19,7 +19,7 @@ export const HeroText = () => {
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
-          className="text-4xl font-medium text-neutral-300"
+          className="text-4xl font-medium text-muted-foreground"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -29,13 +29,13 @@ export const HeroText = () => {
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
-            className="text-5xl font-medium text-neutral-300"
+            className="text-5xl font-medium text-muted-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            A Developer <br /> Dedicated to Crafting
+            An AI Engineer <br /> Dedicated to Building
           </motion.p>
           <motion.div
             variants={variants}
@@ -45,21 +45,21 @@ export const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-black text-white text-8xl"
+              className="font-black text-foreground text-8xl"
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-medium text-neutral-300"
+            className="text-4xl font-medium text-muted-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web & Mobile Solutions
+            Voice AI & RAG Systems
           </motion.p>
           <motion.div
             onClick={openResumeInNewPage}
-            className="mt-10 py-4 px-16 my-4 bg-red-400 rounded-2xl"
+            className="mt-10 py-4 px-16 my-4 bg-red-400 text-on-accent rounded-2xl cursor-pointer"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -72,7 +72,7 @@ export const HeroText = () => {
       {/* Mobile View */}
       <div className="flex flex-col space-y-6 md:hidden">
         <motion.p
-          className="text-4xl font-medium text-neutral-300"
+          className="text-4xl font-medium text-muted-foreground"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -82,7 +82,7 @@ export const HeroText = () => {
         </motion.p>
         <div>
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="text-5xl font-black text-muted-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -98,21 +98,21 @@ export const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-white text-7xl"
+              className="font-bold text-foreground text-7xl"
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-black text-neutral-300"
+            className="text-4xl font-black text-muted-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Mobile & Web Applications
+            Voice AI & RAG Systems
           </motion.p>
           <motion.div
             onClick={openResumeInNewPage}
-            className="mt-5 py-3 my-4 w-40 mx-auto bg-red-400 rounded-2xl"
+            className="mt-5 py-3 my-4 w-40 mx-auto bg-red-400 text-on-accent rounded-2xl cursor-pointer"
             variants={variants}
             initial="hidden"
             animate="visible"

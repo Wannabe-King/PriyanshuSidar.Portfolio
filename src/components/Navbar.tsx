@@ -39,18 +39,18 @@ export const Navbar = () => {
     >
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 text-blurfg-100 glass rounded-full self-start mt-2 xs:mt-3 hover:bg-white"
+          className=" bg-blurfg-100 text-foreground glass rounded-full self-start mt-2 xs:mt-3 hover:bg-red-400 hover:text-on-accent"
           href={"#contact"}
         >
-          <MailOpen size={25} className="m-3 md:m-4" fill="white" />
+          <MailOpen size={25} className="m-3 md:m-4" fill="currentColor" />
         </Link>
       )}
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 text-white glass rounded-full self-start mt-2 xs:mt-3 hover:bg-blue-500"
+          className=" bg-blurfg-100 text-foreground glass rounded-full self-start mt-2 xs:mt-3 hover:bg-blue-500 hover:text-white"
           href={"https://www.linkedin.com/in/priyanshu-sidar-639914144/"}
         >
-          <Linkedin size={25} className="m-3 md:m-4" fill="white" />
+          <Linkedin size={25} className="m-3 md:m-4" fill="currentColor" />
         </Link>
       )}
       <div
@@ -60,7 +60,7 @@ export const Navbar = () => {
         onMouseLeave={switchState}
       >
         {!isOpen && (
-          <div className=" p-3 xs:p-4 bg-red-400 text-blurfg-100 rounded-full">
+          <div className=" p-3 xs:p-4 bg-red-400 text-on-accent rounded-full">
             <Ellipsis />
           </div>
         )}
@@ -75,30 +75,31 @@ export const Navbar = () => {
               setPosition={setPosition}
             />
             <Tab name="CONTACT" href="/#contact" setPosition={setPosition} />
-            {/* To be implemented */}
-            <Tab
+            {/* Hidden until the blog content is ready. The /todayilearned
+                route still exists and is reachable directly. */}
+            {/* <Tab
               name="TODAY I LEARNED"
               href="/todayilearned"
               setPosition={setPosition}
-            />
+            /> */}
             <Cursor position={position} />
           </nav>
         )}
       </div>
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 text-white glass rounded-full self-start mt-2 xs:mt-3 hover:bg-blue-400"
+          className=" bg-blurfg-100 text-foreground glass rounded-full self-start mt-2 xs:mt-3 hover:bg-blue-400 hover:text-white"
           href={"#"}
         >
-          <Twitter size={25} className="m-3 md:m-4" fill="white" />
+          <Twitter size={25} className="m-3 md:m-4" fill="currentColor" />
         </Link>
       )}
       {!isOpen && (
         <Link
-          className=" bg-blurfg-100 glass text-white rounded-full self-start mt-2 xs:mt-3 hover:bg-black"
+          className=" bg-blurfg-100 glass text-foreground rounded-full self-start mt-2 xs:mt-3 hover:bg-foreground hover:text-background"
           href={"https://github.com/Wannabe-King"}
         >
-          <Github size={25} className="m-3 md:m-4" fill="white" />
+          <Github size={25} className="m-3 md:m-4" fill="currentColor" />
         </Link>
       )}
     </header>
@@ -131,7 +132,7 @@ const Tab = ({
           opacity: 1,
         });
       }}
-      className="py-4 px-4  rounded-4xl  whitespace-nowrap hover:text-blurfg-100 "
+      className="py-4 px-4  rounded-4xl  whitespace-nowrap hover:text-on-accent "
     >
       {name}
     </Link>
@@ -144,7 +145,7 @@ const Cursor = ({ position }: { position: Position }) => {
       animate={{
         ...position,
       }}
-      className="absolute -z-10 h-14 rounded-4xl bg-red-400 py-4 text-blurfg-100"
+      className="absolute -z-10 h-14 rounded-4xl bg-red-400 py-4 text-on-accent"
     />
   );
 };

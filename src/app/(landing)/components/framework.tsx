@@ -1,16 +1,18 @@
 import { OrbitingCircles } from "@/components/ui/orbiting-circles";
 
 export function Frameworks() {
+  // Only logos that exist under public/assets/logos - the AI stack (FastAPI,
+  // LangChain, Pinecone, OpenAI) has no assets checked in yet.
   const skills = [
-    "git",
-    "react",
-    "tailwindcss",
-    "nextjs",
     "python",
     "typescript",
-    "firebase",
+    "nextjs",
+    "react",
+    "node",
     "postgresql",
-    "flutter",
+    "tailwindcss",
+    "firebase",
+    "git",
   ];
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">

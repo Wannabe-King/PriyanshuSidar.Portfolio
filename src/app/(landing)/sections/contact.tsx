@@ -5,7 +5,9 @@ import emailjs from "@emailjs/browser";
 import { Alert } from "../components/Alert";
 import { AlertType } from "@/lib/utils";
 import { Particles } from "@/components/ui/particles";
+import { useTheme } from "@/components/ThemeProvider";
 export const Contact = () => {
+  const { theme } = useTheme();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,14 +66,14 @@ export const Contact = () => {
         className="absolute inset-0 -z-50"
         quantity={100}
         ease={80}
-        color={"#ffffff"}
+        color={theme === "light" ? "#0b0d1c" : "#ffffff"}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-border rounded-2xl bg-primary">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let&apos;s Talk</h2>
-          <p className="font-normal text-neutral-400">
+          <p className="font-normal text-muted-foreground">
             Whether you&apos;re loking to build a new website, improve your
             existing platform, or bring a unique project to life, I&apos;m here
             to help
@@ -128,7 +130,7 @@ export const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-3 text-lg text-center text-white rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
           >
             {!isLoading ? "Send" : "Sending..."}
           </button>

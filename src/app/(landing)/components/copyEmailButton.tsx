@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 export const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
-  const email = "priyanshu21100@iiitnr.edu.in";
+  const email = "priyanshusidar85@gmail.com";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email);
@@ -20,7 +20,7 @@ export const CopyEmailButton = () => {
       onClick={copyToClipboard}
       whileHover={{ y: -5 }}
       whileTap={{ scale: 1.05 }}
-      className="relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden"
+      className="relative px-1 py-4 text-sm text-center text-foreground rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden"
     >
       <AnimatePresence mode="wait">
         {copied ? (
@@ -36,7 +36,7 @@ export const CopyEmailButton = () => {
               src="assets/copy-done.svg"
               width={5}
               height={5}
-              className="w-5"
+              className="w-5 theme-icon"
               alt="copy Icon"
             />
             Email has Copied
@@ -52,7 +52,7 @@ export const CopyEmailButton = () => {
           >
             <Image
               src="assets/copy.svg"
-              className="w-5"
+              className="w-5 theme-icon"
               alt="copy icon"
               width={23}
               height={56}

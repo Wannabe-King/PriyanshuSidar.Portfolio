@@ -9,7 +9,7 @@ import { Frameworks } from "../components/framework";
 const About = () => {
   const grid2Container = useRef<HTMLDivElement>(null);
   return (
-    <section className="c-space section-spacing text-neutral-300" id="about">
+    <section className="c-space section-spacing text-foreground" id="about">
       <h2 className="text-heading">About Me</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
@@ -22,8 +22,9 @@ const About = () => {
           <div className="z-10">
             <p className="headtext">Hi, I&apos;m Priyanshu Sidar</p>
             <p className="subtext">
-              With 8+ months of experience, I developed my frontend and backend
-              dev skills to deliver dynamic and software and web applications.
+              An AI engineer with 1.5+ years of experience building real-time
+              voice agents, RAG pipelines, and the full-stack products around
+              them.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -34,7 +35,7 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-5xl text-subtle">
               CODE IS CRAFT
             </p>
             <Card
@@ -44,7 +45,7 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
-              text="SOLID"
+              text="Evals"
               containerRef={grid2Container}
             />
             <Card
@@ -54,7 +55,7 @@ const About = () => {
             />
             <Card
               style={{ rotate: "-45deg", top: "55%", left: "0%" }}
-              text="Smart Contract"
+              text="RAG"
               containerRef={grid2Container}
             />
             <Card
@@ -64,7 +65,7 @@ const About = () => {
             />
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/flutter.svg"
+              image="assets/logos/node.svg"
               containerRef={grid2Container}
             />
             <Card
@@ -109,7 +110,8 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">
-              I&apos;m based in India, and open to remote work worldwide
+              I&apos;m based in Bengaluru, India, and open to remote work
+              worldwide
             </p>
           </div>
           <Globe className="absolute left-[30%] top-[10%]" />
@@ -126,10 +128,11 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+            <p className="headtext">Tech Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
-              allow me to build robust and scalable applications
+              I work across Python and TypeScript — FastAPI and LLM tooling on
+              the backend, Next.js and React on the front, shipped on Docker and
+              the cloud.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">

@@ -2,13 +2,14 @@
 
 import createGlobe, { COBEOptions } from "cobe";
 import { useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 
+import { useTheme } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 
 const MOVEMENT_DAMPING = 1400;
 
-const GLOBE_CONFIG: COBEOptions = {
+const BASE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
   onRender: () => {},
@@ -23,17 +24,34 @@ const GLOBE_CONFIG: COBEOptions = {
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [1, 1, 1],
   markers: [
-    { location: [19.076, 78.8777], size: 0.2 },
+    // Bengaluru
+    { location: [12.9716, 77.5946], size: 0.2 },
   ],
+};
+
+// WebGL can't read CSS variables, so the palette is duplicated here.
+const LIGHT_OVERRIDES: Partial<COBEOptions> = {
+  dark: 0,
+  diffuse: 1.2,
+  mapBrightness: 3,
+  baseColor: [0.78, 0.81, 0.92],
+  glowColor: [0.85, 0.88, 0.96],
 };
 
 export function Globe({
   className,
-  config = GLOBE_CONFIG,
+  config,
 }: {
   className?: string;
   config?: COBEOptions;
 }) {
+  const { theme } = useTheme();
+  const resolvedConfig = useMemo<COBEOptions>(() => {
+    if (config) return config;
+    return theme === "light"
+      ? { ...BASE_CONFIG, ...LIGHT_OVERRIDES }
+      : BASE_CONFIG;
+  }, [config, theme]);
   let phi = 0;
   let width = 0;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -73,7 +91,7 @@ export function Globe({
     onResize();
 
     const globe = createGlobe(canvasRef.current!, {
-      ...config,
+      ...resolvedConfig,
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
@@ -89,7 +107,7 @@ export function Globe({
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, [rs, config]);
+  }, [rs, resolvedConfig]);
 
   return (
     <div
