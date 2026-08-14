@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { LoadingGate } from "@/components/LoadingGate";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -48,9 +49,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider>
-          <ThemeToggle />
-          <Navbar />
-          {children}
+          <LoadingGate>
+            <ThemeToggle />
+            <Navbar />
+            {children}
+          </LoadingGate>
         </ThemeProvider>
       </body>
     </html>
