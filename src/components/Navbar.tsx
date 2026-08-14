@@ -141,7 +141,9 @@ const Tab = ({
 
 const Cursor = ({ position }: { position: Position }) => {
   return (
-    <motion.li
+    // A div, not an li: outside a list, `display: list-item` paints a bullet
+    // marker to the left of the highlight.
+    <motion.div
       animate={{
         ...position,
       }}
