@@ -7,7 +7,6 @@ import { Suspense } from "react";
 import { Float } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
-import { Loader } from "@/components/Loader";
 import { SceneProgressReporter } from "@/components/SceneProgressReporter";
 import { MusicPlayer } from "../components/musicPlayer";
 
@@ -30,7 +29,10 @@ export const Hero = () => {
             touch-action: none on the canvas, which blocks page scrolling.
             Camera movement is handled by Rig below. */}
         <Canvas camera={{ position: [0, 2, 3] }} style={{ touchAction: "pan-y" }}>
-          <Suspense fallback={<Loader />}>
+          {/* No in-canvas fallback: <LoadingGate> already covers the page with
+              a single progress ring, and an <Html> fallback here would show a
+              second one anchored in 3D space that drifts as the page scrolls. */}
+          <Suspense fallback={null}>
             <Float>
               <Astronaut
                 scale={isMobile ? 0.23 : undefined}
