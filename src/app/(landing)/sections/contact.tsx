@@ -130,7 +130,7 @@ export const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center text-white rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-red-400 text-on-accent hover-animation"
           >
             {!isLoading ? "Send" : "Sending..."}
           </button>

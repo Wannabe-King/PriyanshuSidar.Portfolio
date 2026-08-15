@@ -15,11 +15,14 @@ export const HeroText = () => {
   };
 
   return (
-    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
+    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
+        {/* Full-strength foreground, not muted: these lines sit over the WebGL
+            canvas, whose pixels shift as the model floats, so a mid-tone here
+            drops under the AA threshold wherever the astronaut passes behind. */}
         <motion.h1
-          className="text-4xl font-medium text-muted-foreground"
+          className="text-4xl font-medium text-foreground"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -29,7 +32,7 @@ export const HeroText = () => {
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
-            className="text-5xl font-medium text-muted-foreground"
+            className="text-5xl font-medium text-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -49,7 +52,7 @@ export const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-medium text-muted-foreground"
+            className="text-4xl font-medium text-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -72,7 +75,7 @@ export const HeroText = () => {
       {/* Mobile View */}
       <div className="flex flex-col space-y-6 md:hidden">
         <motion.p
-          className="text-4xl font-medium text-muted-foreground"
+          className="text-4xl font-medium text-foreground"
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -82,7 +85,7 @@ export const HeroText = () => {
         </motion.p>
         <div>
           <motion.p
-            className="text-5xl font-black text-muted-foreground"
+            className="text-5xl font-black text-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -102,7 +105,7 @@ export const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-black text-muted-foreground"
+            className="text-4xl font-black text-foreground"
             variants={variants}
             initial="hidden"
             animate="visible"

@@ -104,7 +104,9 @@
   --background: #f3f4fb;
   --foreground: #0b0d1c;
   --muted-foreground: #4b5169;
-  --subtle: #767c94;
+  /* 4.66:1 on --background and 3.19:1 on --storm, the two surfaces it lands on.
+     The old #767c94 was 3.77:1 / 2.58:1 and failed AA in both spots. */
+  --subtle: #676d86;
   --divider: #b9bed4;
   --surface: #ffffff;
   --muted: #e6e8f4;
@@ -138,7 +140,8 @@
   --background: #030412;
   --foreground: #ffffff;
   --muted-foreground: #a3a3a3;
-  --subtle: #737373;
+  /* 4.95:1 on --background; the old #737373 sat at 4.30:1. */
+  --subtle: #7d7d7d;
   --divider: #404040;
   --surface: #262626;
   --muted: #171717;
@@ -213,7 +216,7 @@ img[src$="nextjs.svg"] {
 }
 
 .subtext {
-  @apply text-muted-foreground text-sm md:text-base text-pretty;
+  @apply text-muted-foreground text-sm md:text-base text-pretty max-w-[65ch];
 }
 
 /* Navigation */
@@ -233,8 +236,37 @@ img[src$="nextjs.svg"] {
   @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
 }
 
+/* The four section headings - About Me, My Selected Projects, My Work
+   Experience, Let's Talk. Fraunces carries the optical-size axis, so at 3xl/4xl
+   these pick up its display cut rather than the text one. */
 .text-heading {
+  /* Must come BEFORE the @apply: the md: variant expands to a nested @media,
+     and a declaration sitting after a nested rule gets dropped on compile. */
+  font-family: var(--font-fraunces), serif;
   @apply font-bold text-3xl md:text-4xl;
+}
+
+/* Hero Section
+   Serif pairing, deliberately scoped to #home so it stays an experiment in the
+   hero and the rest of the page keeps the body font. No !important needed:
+   #home (1,0,0) already outranks the `body` rule above, and nothing in the hero
+   carries a font-family utility. */
+#home {
+  font-family: var(--font-fraunces), serif;
+}
+
+/* Desktop only, in practice - the mobile headline is a <p>, so it takes the
+   Fraunces above rather than this. Deliberately does not list .text-heading:
+   that class is the section headings, which are Fraunces everywhere. */
+#home h1,
+#home h2 {
+  font-family: var(--font-instrument-serif), serif;
+}
+
+/* The FlipWords rotator is the only span in the hero; it renders one per
+   letter, so this is what puts the rotating word in Outfit. */
+#home span {
+  font-family: var(--font-outfit), sans-serif;
 }
 
 /* About Section */
@@ -258,8 +290,10 @@ img[src$="nextjs.svg"] {
   @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl;
 }
 
+/* Solid accent rather than a violet gradient, so the one CTA panel on the page
+   reads in the same colour as the Resume and Send buttons. */
 .grid-special-color {
-  @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl text-white;
+  @apply p-6 bg-red-400 rounded-2xl text-on-accent;
 }
 .grid-black-color {
   @apply p-6 rounded-2xl;
@@ -269,6 +303,29 @@ img[src$="nextjs.svg"] {
     var(--panel-via),
     var(--panel-to)
   );
+}
+
+/* Work Experience Section
+   #exp wraps the whole Timeline, so this is the timeline's own font - the
+   bullet content and anything not overridden below. */
+#exp {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Re-asserted because #exp (1,0,0) outranks the bare .text-heading (0,1,0)
+   above, which would otherwise pull "My Work Experience" out of Fraunces and
+   make it the one section heading that does not match the rest. */
+#exp .text-heading {
+  font-family: var(--font-fraunces), serif;
+}
+
+/* The date / role / company / location / stack block. Timeline renders it
+   twice - a sticky desktop copy and a md:hidden mobile one - so it needs a
+   class rather than a structural selector. No specificity fight with #exp
+   above: that rule matches the section, and a direct match beats an inherited
+   value whatever the scores say. */
+.exp-role {
+  font-family: var(--font-manrope), sans-serif;
 }
 
 /* Contact Section*/

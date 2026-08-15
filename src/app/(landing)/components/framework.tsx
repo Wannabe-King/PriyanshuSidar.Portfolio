@@ -30,6 +30,8 @@ export function Frameworks() {
   );
 }
 
+// No hover transform: these orbit on their own and aren't click targets, so a
+// scale-up on hover is feedback for an interaction that doesn't exist.
 const Icon = ({ src }: { src: string }) => (
-  <img src={src} className="duration-200 rounded-sm hover:scale-110" />
+  <img src={src} alt="" className="rounded-sm" />
 );

@@ -282,7 +282,7 @@ export const experiences = [
   },
   {
     title: "SDE Intern ",
-    job: "Aletix - Sanrakshak",
+    job: "Alertix - Sanrakshak",
     date: "Jan. - June 2025",
     contents: [
       "Implementing UI of the application and implemented features like emergency sos, live traking, nearest police station and hospital locations marked on map.",
