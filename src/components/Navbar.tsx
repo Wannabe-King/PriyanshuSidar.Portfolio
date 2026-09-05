@@ -75,13 +75,11 @@ export const Navbar = () => {
               setPosition={setPosition}
             />
             <Tab name="CONTACT" href="/#contact" setPosition={setPosition} />
-            {/* Hidden until the blog content is ready. The /todayilearned
-                route still exists and is reachable directly. */}
-            {/* <Tab
+            <Tab
               name="TODAY I LEARNED"
               href="/todayilearned"
               setPosition={setPosition}
-            /> */}
+            />
             <Cursor position={position} />
           </nav>
         )}
