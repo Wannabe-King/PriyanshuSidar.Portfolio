@@ -31,7 +31,10 @@ export default function TodayILearned() {
 
       <div className="bg-gradient-to-r from-transparent via-divider to-transparent mt-12 h-[1px] w-full" />
 
-      <LearnedList posts={myBlogs} />
+      {/* myBlogs is stored oldest-first so a new post can be appended to the
+          end rather than spliced in at the top; reversing here is what puts
+          the newest one first on screen. Copied first - reverse() mutates. */}
+      <LearnedList posts={[...myBlogs].reverse()} />
     </main>
   );
 }

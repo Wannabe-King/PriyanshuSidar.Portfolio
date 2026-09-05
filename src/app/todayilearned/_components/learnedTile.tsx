@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { Dispatch, Key, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 export type LearnedPost = {
   id: number;
@@ -11,7 +11,8 @@ export type LearnedPost = {
   description: string;
   href: string;
   image: string;
-  tags: { id: Key; name: string }[];
+  /** Plain strings - they are unique within a post, so they key themselves. */
+  tags: readonly string[];
 };
 
 type LearnedTileProps = LearnedPost & {
@@ -55,8 +56,8 @@ export const LearnedTile = ({
           <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sand">
             <span>{platform}</span>
             {tags.map((tag) => (
-              <span key={tag.id} className="hidden md:inline">
-                {tag.name}
+              <span key={tag} className="hidden md:inline">
+                {tag}
               </span>
             ))}
           </div>

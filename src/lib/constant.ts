@@ -233,14 +233,56 @@ export const myProjects = [
 /* Backs the /todayilearned page. Hand-maintained on purpose: Hashnode and
    Substack both expose the posts (GraphQL and RSS respectively), but fetching
    either would put a network call in the render or the build, and this keeps
-   the page static output like every other section on the site. Add a post at
-   the top when you publish - the list renders in array order.
+   the page static output like every other section on the site.
 
+   OLDEST FIRST. The page reverses this, so a new post goes on the END of the
+   array and lands at the top of the list - nothing above it has to be touched.
+   Same arrangement as myProjects above.
+
+   `id` only has to be unique, so appending means taking the next number.
    `date` is the display string, so write it the way you want it read.
    `image` is optional: rows without one just skip the hover preview. */
 export const myBlogs = [
   {
     id: 1,
+    title: "FlutterFire Tutorial [2024]",
+    platform: "Hashnode",
+    date: "March. 2024",
+    description:
+      "A tutorial on how to use FlutterFire to build a Flutter app with Firebase backend, including authentication, database, and cloud functions.",
+    href: "https://hashnode.com/edit/clu2fwi3o000208il25sd3c7x",
+    image: "",
+    tags: ["Flutter", "Firebase", "Backend", "FlutterFire"],
+  },
+  {
+    id: 2,
+    title: "Difference between Common JS and ECMAScript(ES)",
+    platform: "Hashnode",
+    date: "Feb. 2025",
+    description:
+      "Common JS and ES(ECMAScript) Modules are two different ways of organizing and sharing JavaScript code. Here's a breakdown of their key differences:",
+    href: "https://hashnode.com/edit/cm72g7rou000109ju1dxtdy5v",
+    image: "",
+    tags: ["JavaScript", "ECMAScript", "InterviewQuestions"],
+  },
+  {
+    id: 3,
+    title: "Voice Agents VS Chatbots",
+    platform: "Hashnode",
+    date: "Aug. 2026",
+    description: "What makes voice agents different from chatbots",
+    href: "https://hashnode.com/edit/cmtlm68w000000agmc7bx549w",
+    image: "",
+    tags: [
+      "ai",
+      "Voice AI",
+      "Agents",
+      "Machine Learning",
+      "Introduction To Voice AI",
+    ],
+  },
+  {
+    id: 4,
     title:
       "6 Hidden Latency Traps in Production Voice AI and How to Avoid them",
     platform: "Substack",
@@ -249,62 +291,7 @@ export const myBlogs = [
       "I have many learnings from working there and I wanted to share my learning so that others can learn from my mistakes and avoid them.",
     href: "https://priyanshusidar.substack.com/p/6-hidden-latency-traps-in-production?r=91h5xl",
     image: "",
-    tags: [
-      { id: 1, name: "Voice AI" },
-      { id: 2, name: "Latency" },
-      { id: 3, name: "RAG" },
-      { id: 4, name: "STT" },
-      { id: 4, name: "LLM" },
-      { id: 4, name: "TTS" },
-      { id: 4, name: "Optimization" },
-    ],
-  },
-  {
-    id: 2,
-    title: "Voice Agents VS Chatbots",
-    platform: "Hashnode",
-    date: "Aug. 2026",
-    description: "What makes voice agents different from chatbots",
-    href: "https://hashnode.com/edit/cmtlm68w000000agmc7bx549w",
-    image: "",
-    tags: [
-      { id: 1, name: "ai" },
-      { id: 2, name: "Voice AI" },
-      { id: 3, name: "Agents" },
-      { id: 4, name: "Machine Learning" },
-      { id: 5, name: "Introduction To Voice AI" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Difference between Common JS and ECMAScript(ES)",
-    platform: "Hashnode",
-    date: "Feb. 2025",
-    description:
-      "Common JS and ES(ECMAScript) Modules are two different ways of organizing and sharing JavaScript code. Here's a breakdown of their key differences:",
-    href: "https://hashnode.com/edit/cm72g7rou000109ju1dxtdy5v",
-    image: "",
-    tags: [
-      { id: 1, name: "JavaScript" },
-      { id: 2, name: "ECMAScript" },
-      { id: 2, name: "InterviewQuestions" },
-    ],
-  },
-  {
-    id: 4,
-    title: "FlutterFire Tutorial [2024]",
-    platform: "Hashnode",
-    date: "March. 2024",
-    description:
-      "A tutorial on how to use FlutterFire to build a Flutter app with Firebase backend, including authentication, database, and cloud functions.",
-    href: "https://hashnode.com/edit/clu2fwi3o000208il25sd3c7x",
-    image: "",
-    tags: [
-      { id: 1, name: "Flutter" },
-      { id: 2, name: "Firebase" },
-      { id: 3, name: "Backend" },
-      { id: 4, name: "FlutterFire" },
-    ],
+    tags: ["Voice AI", "Latency", "RAG", "STT", "LLM", "TTS", "Optimization"],
   },
 ];
 
