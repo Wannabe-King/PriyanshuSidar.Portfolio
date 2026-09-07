@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { myBlogs } from "@/lib/constant";
-import { LearnedList } from "./_components/learnedList";
+import { LearnedTile } from "./_components/learnedTile";
 
 export const metadata: Metadata = {
   title: "Today I Learned — Priyanshu Sidar",
@@ -16,7 +16,7 @@ export default function TodayILearned() {
           propagates to the canvas rather than painting here. */}
       <div
         aria-hidden
-        className="fixed inset-x-0 top-24 -z-10 text-center text-5xl font-extrabold tracking-tight text-subtle/20 sm:text-7xl lg:text-9xl"
+        className="pointer-events-none fixed inset-x-0 top-24 -z-10 select-none text-center text-5xl font-extrabold tracking-tight text-subtle/10 sm:text-7xl lg:text-9xl"
       >
         TODAY I LEARNED
       </div>
@@ -34,7 +34,9 @@ export default function TodayILearned() {
       {/* myBlogs is stored oldest-first so a new post can be appended to the
           end rather than spliced in at the top; reversing here is what puts
           the newest one first on screen. Copied first - reverse() mutates. */}
-      <LearnedList posts={[...myBlogs].reverse()} />
+      {[...myBlogs].reverse().map((post) => (
+        <LearnedTile key={post.id} {...post} />
+      ))}
     </main>
   );
 }

@@ -241,7 +241,12 @@ export const myProjects = [
 
    `id` only has to be unique, so appending means taking the next number.
    `date` is the display string, so write it the way you want it read.
-   `image` is optional: rows without one just skip the hover preview. */
+   `image` is the cover, saved into /public/assets/blogs rather than hotlinked
+   off the platform CDN - those URLs carry transform tokens that rot, and a
+   local copy keeps the page self-contained. It is optional: a row without one
+   falls back to a muted frame holding the platform logo, so the list stays
+   aligned. Any aspect ratio works - the frame is 16:9 and crops to fill - but
+   a 16:9 source crops least. */
 export const myBlogs = [
   {
     id: 1,
@@ -250,8 +255,8 @@ export const myBlogs = [
     date: "March. 2024",
     description:
       "A tutorial on how to use FlutterFire to build a Flutter app with Firebase backend, including authentication, database, and cloud functions.",
-    href: "https://hashnode.com/edit/clu2fwi3o000208il25sd3c7x",
-    image: "",
+    href: "https://priyanshusidar.hashnode.dev/flutterfire-tutorial-2024",
+    image: "/assets/blogs/flutterfire.png",
     tags: ["Flutter", "Firebase", "Backend", "FlutterFire"],
   },
   {
@@ -261,8 +266,8 @@ export const myBlogs = [
     date: "Feb. 2025",
     description:
       "Common JS and ES(ECMAScript) Modules are two different ways of organizing and sharing JavaScript code. Here's a breakdown of their key differences:",
-    href: "https://hashnode.com/edit/cm72g7rou000109ju1dxtdy5v",
-    image: "",
+    href: "https://priyanshusidar.hashnode.dev/difference-between-common-js-and-ecmascriptes",
+    image: "/assets/blogs/commonjs-vs-es.png",
     tags: ["JavaScript", "ECMAScript", "InterviewQuestions"],
   },
   {
@@ -271,10 +276,9 @@ export const myBlogs = [
     platform: "Hashnode",
     date: "Aug. 2026",
     description: "What makes voice agents different from chatbots",
-    href: "https://hashnode.com/edit/cmtlm68w000000agmc7bx549w",
-    image: "",
+    href: "https://priyanshusidar.hashnode.dev/what-makes-voice-agents-different-from-chatbots",
+    image: "/assets/blogs/voice-agents-vs-chatbots.png",
     tags: [
-      "ai",
       "Voice AI",
       "Agents",
       "Machine Learning",
@@ -290,7 +294,7 @@ export const myBlogs = [
     description:
       "I have many learnings from working there and I wanted to share my learning so that others can learn from my mistakes and avoid them.",
     href: "https://priyanshusidar.substack.com/p/6-hidden-latency-traps-in-production?r=91h5xl",
-    image: "",
+    image: "/assets/blogs/latency-traps.jpg",
     tags: ["Voice AI", "Latency", "RAG", "STT", "LLM", "TTS", "Optimization"],
   },
 ];
