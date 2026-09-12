@@ -7,6 +7,7 @@ import {
   Outfit,
   Manrope,
 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { LoadingGate } from "@/components/LoadingGate";
 import { Navbar } from "@/components/Navbar";
@@ -87,6 +88,13 @@ export default function RootLayout({
             {children}
           </LoadingGate>
         </ThemeProvider>
+        {/*
+         * Pageview tracking. Sits outside <LoadingGate> on purpose: the gate's
+         * state churns on every progress tick, and a visit should be recorded
+         * even if the overlay never clears. Injects nothing in development and
+         * sets no cookies, so no consent banner is required.
+         */}
+        <Analytics />
       </body>
     </html>
   );
